@@ -20,9 +20,7 @@
         <ul class="navbar__menu">
             <li class="navbar__menu__item active" data-link="#home">Home</li>
             <li class="navbar__menu__item" data-link="#about">About</li>
-            <li class="navbar__menu__item" data-link="#skills">Skills</li>
-            <li class="navbar__menu__item" data-link="#work">My work</li>
-            <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+            <li class="navbar__menu__item" data-link="#project">Projects</li>
             <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
         <!-- Toggle button -->
@@ -34,16 +32,18 @@
     <!--Home-->
     <section id="home">
         <div class="home__container">
-            <img src="imgs/%EC%86%A1%EC%84%9C%ED%9D%AC_%EB%A9%B4%EC%A0%91%EC%82%AC%EC%A7%84.jpg" alt="SSH's profile photo" class="home__avatar">
+            
             <h1 class="home__title">Hello,<br> I'm Song Seo Hui</h1>
             <h2 class="home__description">Developer who develops beautiful and convenient webs.</h2>
             <button class="home__contact">Contact Me</button>
+            <img src="imgs/%EC%86%A1%EC%84%9C%ED%9D%AC_%EB%A9%B4%EC%A0%91%EC%82%AC%EC%A7%84.jpg" alt="SSH's profile photo" class="home__avatar">
         </div>
     </section>
     <!--About-->
     <section id="about" class="section section__container">
         <h1>About me</h1>
-        <p>나를 잘 어필할수 있는 문장 3줄정도 쓰기</p>
+        <img src="imgs/%EC%86%A1%EC%84%9C%ED%9D%AC_%EB%A9%B4%EC%A0%91%EC%82%AC%EC%A7%84.jpg" alt="SSH's profile photo" class="home__avatar">
+        <p>안녕하세요 프론트엔드 개발자를 꿈꾸는 송서희입니다. 저는 사람들에게 웹사이트를 편리하게 보고 즐길수있도록 개발하는게 목표입니다.</p>
         <div class="about__majors">
             <div class="major">
                 <div class="major__icon">
@@ -74,29 +74,17 @@
             <div class="job">
                 <img src="#" alt="" class="job__logo">
                 <div class="job__description">
-                    <p class="job__name">Currently working at Samsung as Software Engineer</p>
-                    <p class="job__period">2019 Sept - Until now</p>
-                </div>
-                
-            </div>
-            <div class="job">
-                <img src="#" alt="" class="job__logo">
-                <div class="job__description">
-                    <p class="job__name">Currently working at Samsung as Software Engineer</p>
-                    <p class="job__period">2019 Sept - Until now</p>
+                    <p class="job__name">웹디자인 학원 수강</p>
+                    <p class="job__period">2020.03-2020.09</p>
                 </div>
                 
             </div>
         </div>
         
-    </section>
-    <!--Skills-->
-    <section id="skills" class="section">
-       <div class="section__container">
-            <h1>Skills</h1>
-            <h2>Skills & Attributes</h2>
+         <!--Skills-->
+        <div class="section__container">
+            <h3>Skills</h3>
             <p>Experience with all phases of the software life.새로운 기술배우는데 열정있고 뭐시기뭐시기</p>
-        
             <!--Skill box들-->
             <div class="skillset">
                 <!--Skill box 왼쪽꺼-->
@@ -114,37 +102,14 @@
                         </div>
                     </div>
                 </div>
-                <!--Skill box 오른쪽꺼-->
-                <div class="skillset__right">
-                    <!--사용할줄아는 도구들-->
-                    <div class="tools">
-                        <h3 class="skillset__title"> Tools</h3>
-                        <ul class="tools__list">
-                            <li><span>Visual Studio Code</span></li>
-                            <li><span>Sketch app</span></li>
-                            <li><span>...</span></li>
-                            <li><span>...</span></li>
-                            <li><span>...</span></li>
-                        </ul>
-                    </div>
-                    <!--그외의...-->
-                    <div class="etc">
-                        <h3 class="skillset__title"> Etc</h3>
-                        <ul class="etc__list">
-                            <li><span>Git</span></li>
-                            <li><span>...</span></li>
-                            <li><span>...</span></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
+        
     </section>
     <!--Work-->
-    <section id="work" class="section">
+    <section id="project" class="section">
         <div class="section__container">
-            <h1>My work</h1>
-            <h3>Projects</h3>
+            <h1>Projects</h1>
             
             <!--button들-->
             <div class="work__categories">
@@ -165,8 +130,13 @@
                 <a href="https://grapefruit12.github.io/html-css_portfolio_cloneApp/" class="project" target="_blank" data-type="front-end">
                 <img src="imgs/projects/project1.png" alt="project1" class="project__img">
                 <div class="project__description">
-                    <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <h3>Snoopy talk</h3>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -175,7 +145,12 @@
                 <img src="imgs/projects/project2.png" alt="project2" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -184,7 +159,12 @@
                 <img src="imgs/projects/project3.png" alt="project3" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -193,7 +173,12 @@
                 <img src="imgs/projects/project4.png" alt="project4" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -202,7 +187,12 @@
                 <img src="imgs/projects/project5.png" alt="project5" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -211,7 +201,12 @@
                 <img src="imgs/projects/project6.png" alt="project6" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -220,7 +215,12 @@
                 <img src="imgs/projects/project7.png" alt="project7" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
                 
@@ -229,7 +229,12 @@
                 <img src="imgs/projects/project8.png" alt="project8" class="project__img">
                 <div class="project__description">
                     <h3>chatting app</h3>
-                    <span>Clone coding wih HTML and CSS</span>
+                    <div>
+                        <div>Html</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
+                    </div>
+                    <p>Clone coding wih HTML and CSS</p>
                 </div>
                 </a>
             </div>
@@ -239,16 +244,14 @@
     </section>
     <!--Contact-->
     <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
+        <h1 class="contact__title">Contact Me</h1>
+        <h2 class="contact__ceilphone">010-8927-1437</h2>
         <h2 class="contact__email">midnight3655@gmail.com</h2>
         <div class="contact__links">
             <a href="https://github.com/Grapefruit12" target="_blank">
                 <i class="fa fa-github-square"></i>
             </a>
         </div>
-        <p class="contact__rights">
-            2022 Song Seo Hui - All rights reserved
-        </p>
     </section>
 
     <!-- Arrow up -->
