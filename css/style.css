@@ -34,6 +34,9 @@
     
   /*Size*/
   --size-border-radius:4px;
+    
+  /*Animation*/
+  --animation-duration:300ms;
 }
 /*Universal tags*/
 *{
@@ -49,7 +52,8 @@ h1{
     font-size:var(--font-large);
     font-weight: var(--weight-bold);
     color:var(--color-black);
-    margin:16px 0px;
+    margin:40px 0px;
+    
 }
 h2{
     font-size:var(--font-medium);
@@ -155,4 +159,169 @@ button{
     padding:8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+/*Section common*/
+.section{
+    /*padding:50px;*/
+    text-align: center;
+    
+    /*margin:auto;*/
+}
+.section__container{
+    max-width: 1200px;
+}
+/*About*/
+#about{
+   height:100vh;
+    
+}
+.about__columns{
+    display: flex;
+    flex-direction: column;
+}
+.about__column1{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__left{
+    
+    /*border:1px solid black;*/
+   
+}
+.about__right{
+    display: flex;
+    justify-content: space-between;
+    /*border:1px solid black;*/
+    /*width: 651px;*/
+}
+
+.about__left>p{
+    text-align: center;
+    line-height: 2;
+    font-weight: var(--weight-semi-bold);
+    margin-bottom: 40px;
+}
+/*
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin:80px 0px;
+}
+.major__icon{
+    width:170px;
+    height:170px;
+    
+    font-size:70px;
+    line-height: 170px;
+    margin:auto;
+    border:1px solid var(--background-color);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    color:var(--background-color);
+    
+}
+.major__icon i{
+    transition: all var(--animation-duration) ease;
+}
+.major__icon:hover i{
+    color:var(--background-dark-color);
+    transform:scale(1.1);
+}
+.major__title, .major__description{
+    color:var(--color-dark-grey);
+}
+.major__description{
+    font-size:var(--font-small);
+}
+*/
+.job{
+    display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+    /*width:48%;*/
+    max-width: 48%;
+    
+    
+   
+    
+}
+.job__title{
+    color: var(--background-color);
+    padding:5px;
+    border:1px solid var(--background-color);
+    border-radius: var(--size-border-radius);
+}
+.job__description{
+    margin:16px 0px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+.job__description__img{
+    width:100px;
+    height:50px;
+    display: flex;
+    
+    align-items: center;
+    margin-right:20px;
+    
+}
+
+.job__description__img img{
+    width:100px;
+    height:auto;
+    object-fit: cover;
+}
+.job__description .mnk{
+    width:60px;
+    height:auto;
+    object-fit: cover;
+}
+.job__description__text{
+    
+    
+}
+.job__name, .job__period{
+    color:var(--color-light-grey);
+}
+.job__name{
+    font-size:var(--font-small);
+}
+.job__period{
+    font-size:var(--font-micro);
+}
+.skill{
+    margin-bottom: 32px;
+}
+.skillset{
+    background-color: var(--background-color);
+    color:var(--color-light-white);
+    margin:20px 0px;
+    padding:20px 40px;
+}
+.skillset__title{
+    color:var(--color-white);
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+.skill__description{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.skill__bar{
+    width:100%;
+    height:7px;
+    background-color: var(--color-grey);
+    border-radius: 10px;
+}
+.skill__value{
+    
+    height:7px;
+    background-color: var(--color-white);
+    /*넓이 99%는 html의 skill__value에서 style="width: 99%;"로 지정, 넓이 변경하고싶으면 width:값을 변경하면 바뀜*/
+    border-radius: 10px;
 }
