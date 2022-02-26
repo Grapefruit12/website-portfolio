@@ -96,6 +96,7 @@ button{
     width:100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .navbar__logo{
     
@@ -124,8 +125,17 @@ button{
 }
 .navbar__menu__item:hover{
     background-color: var(--background-dark-color);
-    
 }
+.navbar__toggle-btn{
+    position: absolute;
+    top:25px;
+    right:32px;
+    font-size:24px;
+    color:var(--color-white);
+    display: none;
+}
+
+
 /*Home*/
 #home{
     
@@ -172,7 +182,7 @@ button{
 }
 /*About*/
 #about{
-   height:100vh;
+   /*height:100vh;*/
    
     
 }
@@ -285,7 +295,7 @@ button{
 }
 .job__description__text{
     width:100%;
-    
+    line-height: 1.2;
 }
 .job__name, .job__period{
     color:var(--color-light-grey);
@@ -296,6 +306,7 @@ button{
 .job__period{
     font-size:var(--font-micro);
 }
+
 .skill{
     margin-bottom: 32px;
 }
@@ -330,7 +341,7 @@ button{
 }
 /*project*/
 .work__categories{
-    margin:40px;
+    margin:40px 0px;
 }
 .category__btn{
     border:1px solid var(--color-dark-white);
@@ -369,10 +380,11 @@ button{
 .work__projects{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    width:100%;
 }
 .project{
-    width:400px;
+    width:49.5%;
     height:300px;
     margin:2px;
     background-color: var(--color-light-white);
@@ -467,4 +479,78 @@ button{
 }
 .contact__links i:hover{
     transform: scale(1.1);
+}
+
+/*화면너비 768px이하일때*/
+@media screen and (max-width:768px){
+    .navbar__toggle-btn{
+        display: block;
+        /*
+        display:none->block
+        화면안보이던게->보여짐
+        */
+    }
+    #navbar>.navbar__container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        
+        flex-direction: column;
+        text-align: center;
+        width:100%;/*flex해도 정렬안된다하면 width:100%해줘서 공간 만들기*/
+        display: none;
+    }
+    #home{
+        height:auto;
+    }
+    .home__container{
+        
+        flex-direction: column;
+        justify-content: center;
+        
+       
+        
+    }
+    .home__title, .home__description{
+        text-align: center;
+    }
+    .home__contact{
+        width:100%;
+    }
+    .home__left{
+        order:2;
+    }
+    .home__right{
+        /*display: none;*/
+        order:1;
+    }
+    
+    .about__right{
+        width:100%;
+    }
+    .skillset{
+        width:100%;
+    }
+    .job__description{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .job__description__img{
+        justify-content: center;
+        margin-right:0px;
+    }
+    .job__description__text{
+        text-align: center;
+    }
+    .work__projects{
+        
+    }
+    .project{
+        flex-grow: 1;
+    }
+    .category__btn{
+        padding:8px 0px;
+        width:32.5%;
+    }
 }
