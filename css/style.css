@@ -85,12 +85,19 @@ button{
 }
 /*Navbar*/
 #navbar{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--background-color);
+    background-color: transparent;
     color:var(--color-white);
     padding:13px 0px;
+    transition:all var(--animation-duration) ease-in-out;
+}
+#navbar.navbar--dark{
+    background-color: var(--background-color);
+    padding:8px;
+    
 }
 .navbar__container{
     width:100vw;
