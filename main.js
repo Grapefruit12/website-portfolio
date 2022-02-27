@@ -17,6 +17,7 @@ document.addEventListener("scroll",() => {
 
 //navbar menu button클릭하면 원하는 곳으로 스크롤링
 const navbarMenu=document.querySelector(".navbar__menu");
+
 navbarMenu.addEventListener("click",(event)=>{
     console.log(event.target.dataset.link);//클릭한 요소의 data-link: ex)#home
     const target=event.target;//클릭한 요소
@@ -25,7 +26,19 @@ navbarMenu.addEventListener("click",(event)=>{
         return;//그냥 반환시킴
     }
     console.log(event.target.dataset.link);
-    const scrollTo=document.querySelector(link);
-    scrollTo.scrollIntoView({behavior:"smooth"});
-    //.scrollIntoView(): 그 요소가 있는 화면으로 스크롤이동(요소이름이 같은 화면으로 이동:#home/ navbar__menu__item의 data-link가 #home===화면이름도 #home)
-})
+    scrollIntoView(link);
+    
+});
+
+//"contact me"버튼 클릭시 contact화면으로가기
+
+const homeContactBtn=document.querySelector(".home__contact");
+
+homeContactBtn.addEventListener("click",()=>{
+    scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector){//요소가 있는 화면으로 스크롤이동
+    const scrollTo=document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:"smooth"});//.scrollIntoView(): 그 요소가 있는 화면으로 스크롤이동(요소이름이 같은 화면으로 이동:#home/ navbar__menu__item의 data-link가 #home===화면이름도 #home)
+}
