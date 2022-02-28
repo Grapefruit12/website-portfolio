@@ -489,6 +489,26 @@ button{
     transform: scale(1.1);
 }
 
+.arrow-btn{
+    opacity: 0;
+    pointer-events: none;/*pointer클릭안되게*/
+    position: fixed;
+    right:20px;
+    bottom:20px;
+    font-size:40px;
+    width:60px;
+    height:60px;
+    background-color: var(--background-color);
+    color:var(--color-white);
+    border-radius: 50%;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-btn.visible{
+    opacity: 1;
+    pointer-events: auto;/*default: auto*/
+}
+
 /*화면너비 768px이하일때*/
 @media screen and (max-width:768px){
     .navbar__toggle-btn{

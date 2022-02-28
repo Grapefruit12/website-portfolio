@@ -60,6 +60,25 @@ document.addEventListener("scroll",() => {
     */
 })
 
+
+
+//arrow버튼으로 화면 맨위로 올라가게, 화면높이0일때는 투명이다가 조금내려왔을때 버튼 보이기
+const arrowBtn=document.querySelector(".arrow-btn");
+
+document.addEventListener("scroll",() => {
+    if(window.scrollY>homeContainerHeight/2){
+        arrowBtn.classList.add("visible");
+    }else{
+        arrowBtn.classList.remove("visible");
+    }
+})
+
+arrowBtn.addEventListener("click",() => {
+    scrollIntoView("#home");
+})
+//->여기까지임
+
+
 function scrollIntoView(selector){//요소가 있는 화면으로 스크롤이동
     const scrollTo=document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:"smooth"});//.scrollIntoView(): 그 요소가 있는 화면으로 스크롤이동(요소이름이 같은 화면으로 이동:#home/ navbar__menu__item의 data-link가 #home===화면이름도 #home)
