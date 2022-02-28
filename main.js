@@ -19,12 +19,14 @@ document.addEventListener("scroll",() => {
 const navbarMenu=document.querySelector(".navbar__menu");
 
 navbarMenu.addEventListener("click",(event)=>{
-    console.log(event.target.dataset.link);//클릭한 요소의 data-link: ex)#home
+    //console.log(event.target); //클릭한요소
+    //console.log(event.target.dataset.link);//클릭한 요소의 data-link: ex)#home
     const target=event.target;//클릭한 요소
     const link=target.dataset.link;//data-link: ex)#home
     if(link===null){//우리가 지정안한 버튼일때
         return;//그냥 반환시킴
     }
+
     console.log(event.target.dataset.link);
     scrollIntoView(link);
     
@@ -37,6 +39,26 @@ const homeContactBtn=document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click",()=>{
     scrollIntoView("#contact");
 });
+
+//윈도우 스크롤시 home의 내용이 점점 투명하게 효과주기
+const homeContainer=document.querySelector(".home__container");
+const homeContainerHeight=homeContainer.getBoundingClientRect().height;
+
+document.addEventListener("scroll",() => {
+    /*console.log(homeContainerHeight);
+    ->homeContainerHeight되는지 확인*/
+    
+    homeContainer.style.opacity=1-window.scrollY/homeContainerHeight;
+    /*
+      home컨테이너 높이에서 윈도우 스크롤높이에 따라, 점점 투명하게할지 짜보았음
+      window.scrollY/homeContainerHeight=0(높이가 0일때)     opacity=1(투명도X)
+      window.scrollY/homeContainerHeight=0.5(높이가 절반일때) opacity=0.5(투명도0.5)
+      window.scrollY/homeContainerHeight=1(높이가 1일때)     opacity=0(투명O)
+      
+      ->(window.scrollY/homeContainerHeight)+ opacity =1으로써 계산함
+      =>opacity=1-(window.scrollY/homeContainerHeight);
+    */
+})
 
 function scrollIntoView(selector){//요소가 있는 화면으로 스크롤이동
     const scrollTo=document.querySelector(selector);
