@@ -78,6 +78,38 @@ arrowBtn.addEventListener("click",() => {
 })
 //->여기까지임
 
+//Projects: 각각 버튼에 알맞은 project 들어오게끔 filtering
+const workBtnContainer=document.querySelector(".work__categories");
+const projectContainer=document.querySelector(".work__projects");
+const projects=document.querySelectorAll(".project");
+workBtnContainer.addEventListener("click",(e) => {
+    const filter=e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    /*
+    e.target.dataset.filter: 버튼 클릭하면 data-filter값O, 버튼안에 숫자클릭하면 undefined
+    버튼안에 있는 숫자도 같은 버튼이니까 data-filter값이 같아야함
+    그래서 or을 쓴것
+    숫자클릭해서 undefined 나와도 || 버튼클릭해서 data-filter값나온것=>filter에 대입
+    *e.target.parentNode.dataset.filter: 부모노드인 버튼 필터
+    */
+    if(filter===null){
+        return;
+    }
+    projectContainer.classList.add("anim-out");
+    
+    
+    
+    setTimeout(() => {
+        projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if(filter==="*" || filter===project.dataset.type){
+            project.classList.remove("invisible");
+        }else{
+            project.classList.add("invisible");
+        }
+    });
+        projectContainer.classList.remove("anim-out");
+    },300);
+})
 
 function scrollIntoView(selector){//요소가 있는 화면으로 스크롤이동
     const scrollTo=document.querySelector(selector);

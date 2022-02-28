@@ -390,6 +390,12 @@ button{
     flex-wrap: wrap;
     justify-content: space-between;
     width:100%;
+    opacity:1;
+    transition:all var(--animation-duration) ease-out;
+}
+.work__projects.anim-out{
+    opacity:0;
+    transform:scale(0.96) translateY(10px);
 }
 .project{
     width:49.5%;
@@ -402,6 +408,9 @@ button{
     align-items: center;
     
     
+}
+.project.invisible{
+    display: none;
 }
 .project__img{
     max-width: 100%;
