@@ -94,9 +94,21 @@ workBtnContainer.addEventListener("click",(e) => {
     if(filter===null){
         return;
     }
+    
+    //이전에 아이템 선택 지우고 새로운 아이템에 선택
+    const active=document.querySelector(".category__btn.selected");
+    active.classList.remove("selected");
+    const target=
+          e.target.nodeName==="BUTTON" ? e.target: e.target.parentNode;
+    /*
+    조건문?true일때 실행: false일때 실행;
+    e.target이 button 또는 span일수도 있어서 조건문 만듬(button>span이니까 span의 부모노드는 button)
+    */
+    target.classList.add("selected");
+    
+    
+    
     projectContainer.classList.add("anim-out");
-    
-    
     
     setTimeout(() => {
         projects.forEach((project) => {
