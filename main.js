@@ -26,10 +26,16 @@ navbarMenu.addEventListener("click",(event)=>{
     if(link===null){//우리가 지정안한 버튼일때
         return;//그냥 반환시킴
     }
-
     console.log(event.target.dataset.link);
+    navbarMenu.classList.remove("open");
     scrollIntoView(link);
     
+});
+
+//핸드폰화면에서 navbar toggle button
+const navbarToggleBtn=document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+    navbarMenu.classList.toggle("open");
 });
 
 //"contact me"버튼 클릭시 contact화면으로가기
