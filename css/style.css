@@ -198,6 +198,9 @@ button {
 .about__left {
   /*border:1px solid black;*/
 }
+.about__left strong{
+  font-weight: var(--weight-bold);
+}
 .about__right {
   display: flex;
   justify-content: space-between;
