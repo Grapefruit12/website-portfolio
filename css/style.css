@@ -76,6 +76,7 @@ button {
 .margin {
   margin: 0px 10%;
 }
+
 /*Navbar*/
 #navbar {
   position: fixed;
@@ -185,7 +186,7 @@ button {
 
 /*About*/
 /* #about {
- height:100vh;
+  margin:auto;
 } */
 .about__columns {
   display: flex;
@@ -213,8 +214,9 @@ button {
 
 .about__majors{
     display: flex;
-    justify-content: space-between;
-    margin:80px 40px;
+    justify-content: center;
+    margin:80px auto;
+   
     
 }
 .major__icon{
@@ -270,6 +272,7 @@ button {
 
 .job {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 15px;
   width:600px;
@@ -277,7 +280,7 @@ button {
 }
 
 .job__description {
-  margin: 0px 16px ;
+  margin: 0px 0px 0px 16px ;
   text-align: left;
   display: flex;
 }
@@ -417,8 +420,6 @@ button {
   max-height: 100%;
 }
 .web{
-  width:80%;
-  height:80%;
   object-fit: cover;
 }
 .project__description {
@@ -491,7 +492,7 @@ button {
   color: var(--color-white);
 }
 .contact__title {
-  margin: 32px;
+  margin: 32px 0;
 }
 .contact__links {
   font-size: var(--font-large);
@@ -547,13 +548,13 @@ button {
   }
 
   .margin {
-    margin: 0px;
+    margin: 0 10px;
   }
 
   #navbar {
     background-color: var(--background-color);
     padding: 13px 0px;
-    width: 100%;
+    width: 100vw;
   }
 
   #navbar > .navbar__container {
@@ -621,24 +622,31 @@ button {
   .about__right {
     width: 100%;
   }
-.about__majors{
+.about__majors,
+.about__jobs
+{
   flex-direction: column;
+  align-items: center;
 }
+
+.job{
+  margin:auto;
+}
+
+.job img{
+  width:100px;
+}
+
+
+  .job__description {
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--font-micro);
+  }
 
   .skillset {
     width: 100%;
     margin-bottom: 0px;
-  }
-  .job__description {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .job__description__img {
-    justify-content: center;
-    margin-right: 0px;
-  }
-  .job__description__text {
-    text-align: center;
   }
   /* .work__projects {
   } */
