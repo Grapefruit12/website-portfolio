@@ -1,4 +1,5 @@
-# Song Seo Hui portfolio website.
+# Song Seo Hui portfolio website.(Responsive Web)
+🔗배포사이트: https://ornate-tapioca-c672d8.netlify.app/
 
 ## 소개
 	- 컴퓨터 통계학 전공을 하였으며, 웹디자인 학원에서 html,css,javascript,포토샵,일러스트를 공부하였습니다.
